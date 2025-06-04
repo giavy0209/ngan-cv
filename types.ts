@@ -1,4 +1,3 @@
-
 export interface ContactInfo {
   email: string;
   phone: string;
@@ -14,7 +13,7 @@ export interface TimelineEvent {
 
 export interface ExperienceProject {
   id: string;
-  projectName: string;
+  projectName:string;
   roleContext: string; // e.g., "Business Analyst - NOIS"
   responsibilities: string[];
   collaboration?: string[];
@@ -25,14 +24,14 @@ export interface ExperienceProject {
 
 export interface EducationEntry {
   degree: string;
-  major?: string;
-  institution: string;
-  year: string;
+  major?: string;      // Made optional as it's sometimes part of degree string
+  institution: string; // Can be part of degree string or standalone
+  year?: string;       // Made optional, can be part of institution string
 }
 
 export interface TechnicalSkillCategory {
   categoryName: string;
-  skills: string[];
+  skills: string[]; // Skills are now a single string in data, joined from array
 }
 
 export interface CvData {

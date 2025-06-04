@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { CvData, TechnicalSkillCategory } from './types';
+import { CvData } from './types'; // TechnicalSkillCategory removed as it's part of CvData
 import Header from './components/Header';
 import Section from './components/Section';
 import TimelineComponent from './components/TimelineComponent';
@@ -8,13 +7,13 @@ import ExperienceCard from './components/ExperienceCard';
 import SkillTag from './components/SkillTag';
 import EducationItem from './components/EducationItem';
 import Footer from './components/Footer';
-import { CheckCircleIcon, BriefcaseIcon, LightBulbIcon, CogIcon, ChartBarIcon, AcademicCapIcon } from './constants';
+// Icons are mostly handled within components or directly as text/SVG for simplicity matching PDF
 
 const cvData: CvData = {
   name: "Ngan Nguyen",
   nickname: "Emma",
   title: "Business Analyst",
-  profileImageUrl: "https://picsum.photos/seed/nganemma/160/160", // Placeholder
+  profileImageUrl: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgdmlld0JveD0iMCAwIDE2MCAxNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2VlZSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9uㅌFamilyPSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjgwIiBmaWxsPSIjY2NjIj5QPC90ZXh0Pjwvc3ZnPg==", // Generic placeholder to mimic a profile image
   contact: {
     email: "thanhhngan97@gmail.com",
     phone: "+84 968 764 900",
@@ -29,10 +28,10 @@ const cvData: CvData = {
     "Mentoring Experience"
   ],
   technicalSkills: [
-    { categoryName: "Modeling Language & Diagramming Tools", skills: ["BPMN", "UML", "Microsoft Visio", "Lucid Chart", "Figma", "Axure"] },
-    { categoryName: "Project Management Software", skills: ["Jira Atlassian", "Redmine Org", "GitHub Enterprise Edition", "GitLab Enterprise Edition", "Microsoft Project"] },
-    { categoryName: "Other Skills", skills: ["Computer Proficiency", "Presentation", "Trainer", "Googling", "Communication", "Marketing"] },
-    { categoryName: "Methodologies", skills: ["Agile/Scrum", "Waterfall per requirements of Project Manager or Client"] }
+    { categoryName: "Modeling Language & Diagramming Tools", skills: ["BPMN, UML, Microsoft Visio, Lucid Chart, Figma, Axure."] },
+    { categoryName: "Project Management Software", skills: ["Jira Atlassian, Redmine Org, GitHub Enterprise Edition, GitLab Enterprise Edition, Microsoft Project."] },
+    { categoryName: "Other Skills", skills: ["Computer Proficiency, Presentation, Trainer, Googling, Communication, Marketing."] },
+    { categoryName: "Methodologies", skills: ["Fully understand and participate in software development and execution stage of the project life cycle with predefined methods: Agile/Scrum, Waterfall per requirements of Project Manager or Client"] } // Updated to match PDF more closely
   ],
   provenSuccessful: [
     "Proven Successful Products: HROS - Paxanimi.ai & Expenso App - Paxanimi.ai",
@@ -54,7 +53,7 @@ const cvData: CvData = {
     {
       id: "A",
       projectName: "TRACK & TRACE SYSTEM (INDUSTRY)",
-      roleContext: "Business Analyst - NOIS (New Ocean IS)",
+      roleContext: "Business Analyst - NOIS", // Simplified from PDF
       responsibilities: [
         "Documentation: Analyzing and gathering business requirements for Track & Trace products : Track & Trace in Processing, Track & Trace in Packaging, Distribution Management, Customer Program.",
         "User Experience (UX): Significantly contributing to creating user-friendly Track & Trace products with intuitive interfaces and satisfying user experiences.",
@@ -75,7 +74,7 @@ const cvData: CvData = {
         "Distribution Management: Built order tracking system, warehouse management, and optimized delivery routes.",
         "Customer Program: Developed customer portal, purchased product tracking feature, and collected customer feedback."
       ],
-      technologiesAndTools: ["Google Space", "diagram.net", "Google Sheet", "Google Doc", "Figma"]
+      technologiesAndTools: ["Google Space, diagram.net, Google Sheet, Google Doc, Figma"]
     },
     {
       id: "B",
@@ -99,7 +98,7 @@ const cvData: CvData = {
         "Achievements in the product from 2022 till now: released more than 20 services within 15 modules, including 1 web application and 2 mobile apps.",
         "Preparing to launch the VN market by September 2024, signed 3 customers for the trials."
       ],
-      technologiesAndTools: ["Google Space", "diagram.net", "Google Sheet", "Google Doc", "Figma"]
+      technologiesAndTools: ["Google Space, diagram.net, Google Sheet, Google Doc, Figma"]
     },
     {
       id: "C",
@@ -120,7 +119,7 @@ const cvData: CvData = {
         "Product got launched successfully and on time as planned.",
         "Currently has > 200 active end users and keep increasing."
       ],
-      technologiesAndTools: ["Google Space", "diagram.net", "Google Sheet", "Google Doc", "Jira Atlassian", "Figma"]
+      technologiesAndTools: ["Google Space, diagram.net, Google Sheet, Google Doc, Jira Atlassian, Figma"]
     },
     {
       id: "D",
@@ -144,7 +143,7 @@ const cvData: CvData = {
         "Product go live on time as planned by timeline.",
         "Web Application and Mobile Application version."
       ],
-      technologiesAndTools: ["Postman", "SPOS System", "FAST System", "Redmine System", "Axure RP", "Visio"]
+      technologiesAndTools: ["Postman, SPOS System, FAST System, Redmine System, Axure RP, Visio"]
     },
     {
       id: "E",
@@ -154,7 +153,7 @@ const cvData: CvData = {
         "Got requirements, analyzed business process Connect business, Register from free member to become OBC's member, Payment process flow and other processes.",
         "Create User Story, Wireframe OBC APP, Functions and USER GUIDE – APP, WEB.",
         "Tested UX/UI, processing flow, APP and WEB integration.",
-        "Training, supported users and fix issues in implement process."
+        "Training, supporting users and fix issues in implement process."
       ],
       collaboration: [
         "Collect Customer Requirements.",
@@ -164,7 +163,7 @@ const cvData: CvData = {
         "Product got launched successfully and on time as planned.",
         "Web Application and Mobile Application."
       ],
-      technologiesAndTools: ["Redmine System", "Axure RP", "Visio"]
+      technologiesAndTools: ["Redmine System, Axure RP, Visio"]
     },
     {
       id: "F",
@@ -193,62 +192,61 @@ const cvData: CvData = {
         "Continuous monitoring and maintaining the delivered application after production.",
         "In-depth understanding and analysis of the SAP ERP process and digitalize the procedure into an application."
       ],
-      technologiesAndTools: ["Visio", "Jira", "SAP"]
+      technologiesAndTools: ["Visio, Jira, SAP"]
     }
   ]
 };
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-white text-gray-800">
       <Header data={cvData} />
-      <main className="max-w-7xl mx-auto">
-        <Section title="Background" className="bg-white shadow-sm" icon={<LightBulbIcon className="w-7 h-7" />}>
-          <p className="text-lg">{cvData.background}</p>
+      <main className="max-w-4xl mx-auto px-4 md:px-6 py-8"> {/* Adjusted max-width and padding */}
+        
+        <Section title="Background">
+          <p className="text-sm text-gray-700 leading-relaxed">{cvData.background}</p>
         </Section>
 
-        <Section title="Professional Skills" icon={<CogIcon className="w-7 h-7" />}>
-          <div className="flex flex-wrap gap-3">
+        <Section title="Professional skills">
+          <div className="flex flex-wrap gap-2">
             {cvData.professionalSkills.map(skill => <SkillTag key={skill} skill={skill} />)}
           </div>
         </Section>
 
-        <Section title="Technical Skills" className="bg-white shadow-sm" icon={<ChartBarIcon className="w-7 h-7" />}>
-          <div className="space-y-6">
+        <Section title="Technical skills">
+          <div className="space-y-3 text-sm">
             {cvData.technicalSkills.map(category => (
               <div key={category.categoryName}>
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">{category.categoryName}:</h3>
-                <ul className="list-disc list-inside space-y-1 pl-4 text-gray-600">
-                  {category.skills.map(skill => <li key={skill}>{skill}</li>)}
-                </ul>
+                <p className="text-gray-700 leading-relaxed">
+                  <span className="font-semibold text-black">{category.categoryName}:</span> {category.skills.join(" ")}
+                </p>
               </div>
             ))}
           </div>
         </Section>
 
-        <Section title="Proven Successful" icon={<CheckCircleIcon className="w-7 h-7 text-sky-500" />}>
-          <ul className="space-y-3">
+        <Section title="Proven Successful">
+          <ul className="space-y-1 list-disc list-outside pl-5 text-sm text-gray-700">
             {cvData.provenSuccessful.map((item, index) => (
-              <li key={index} className="flex items-start">
-                <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3 mt-1 shrink-0" />
-                <span>{item}</span>
-              </li>
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </Section>
         
-        <Section title="Education" className="bg-white shadow-sm" icon={<AcademicCapIcon className="w-7 h-7" />}>
-          <div className="space-y-4">
+        <Section title="Education">
+          <div className="space-y-1 text-sm">
             {cvData.education.map((edu, index) => <EducationItem key={index} {...edu} />)}
           </div>
         </Section>
 
-        <Section title="Career Timeline" icon={<BriefcaseIcon className="w-7 h-7" />}>
+        <div className="mt-6 mb-2"> {/* Container for Timeline Title and Component */}
+          <h2 className="text-xl font-bold text-black mb-3">Timeline Business Analyst</h2>
           <TimelineComponent timeline={cvData.timeline} />
-        </Section>
+        </div>
+        
 
-        <Section title="Professional Experience" className="bg-gray-50" icon={<BriefcaseIcon className="w-7 h-7" />}>
-          <div className="space-y-10">
+        <Section title="Professional experience">
+          <div className="space-y-6">
             {cvData.professionalExperience.map((proj, index) => (
               <ExperienceCard key={proj.id} project={proj} index={index} />
             ))}

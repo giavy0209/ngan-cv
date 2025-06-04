@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface SkillTagProps {
@@ -7,7 +6,7 @@ interface SkillTagProps {
 
 const SkillTag: React.FC<SkillTagProps> = ({ skill }) => {
   return (
-    <span className="bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-sky-200 transition-colors cursor-default">
+    <span className="bg-gray-100 text-gray-700 px-2.5 py-1 rounded border border-gray-300 text-xs font-medium">
       {skill}
     </span>
   );
