@@ -1,50 +1,56 @@
+
 export interface ContactInfo {
   email: string;
-  phone: string;
   location: string;
+  phone: string;
 }
 
-export interface TimelineEvent {
-  dateRange: string;
-  title: string;
-  company: string;
-  current?: boolean;
+export interface ProfessionalSkill {
+  name: string;
 }
 
-export interface ExperienceProject {
-  id: string;
-  projectName:string;
-  roleContext: string; // e.g., "Business Analyst - NOIS"
-  responsibilities: string[];
-  collaboration?: string[];
-  outputsAndAchievements: string[];
-  technologiesAndTools: string[];
-  introText?: string;
+export interface TechnicalSkillItem {
+  category: string;
+  details: string;
 }
 
-export interface EducationEntry {
+export interface ProvenSuccessItem {
+  text: string;
+}
+
+export interface EducationItem {
   degree: string;
-  major?: string;      // Made optional as it's sometimes part of degree string
-  institution: string; // Can be part of degree string or standalone
-  year?: string;       // Made optional, can be part of institution string
+  majorAndInstitution: string;
+  year: string;
 }
 
-export interface TechnicalSkillCategory {
-  categoryName: string;
-  skills: string[]; // Skills are now a single string in data, joined from array
+export interface TimelineItemData {
+  dateRange: string;
+  role: string;
+  company: string;
 }
 
-export interface CvData {
+export interface ExperienceItemData {
+  id: string;
+  title: string;
+  roleAndCompany: string;
+  responsibilities: string[];
+  collaboration: string[];
+  outputsAndAchievements: string[];
+  technologies: string;
+}
+
+export interface CVData {
   name: string;
   nickname: string;
   title: string;
   profileImageUrl: string;
   contact: ContactInfo;
   background: string;
-  professionalSkills: string[];
-  technicalSkills: TechnicalSkillCategory[];
-  provenSuccessful: string[];
-  education: EducationEntry[];
-  timeline: TimelineEvent[];
-  professionalExperience: ExperienceProject[];
+  professionalSkills: ProfessionalSkill[];
+  technicalSkills: TechnicalSkillItem[];
+  provenSuccessful: ProvenSuccessItem[];
+  education: EducationItem[];
+  timeline: TimelineItemData[];
+  professionalExperience: ExperienceItemData[];
 }

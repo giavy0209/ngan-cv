@@ -1,40 +1,57 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ngan Nguyen (Emma) - Business Analyst</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngan Nguyen (Emma) - CV</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              "custom-navy": "#2c3e50",
+              "custom-teal": "#1abc9c",
+              "custom-light-gray": "#f8f9fa", // A very light gray
+              "custom-gray": "#e9ecef", // Light gray
+              "custom-dark-gray": "#343a40", // Dark gray for text/headings
+              "custom-text": "#495057", // Main text color
+            },
+          },
+        },
+      }
+    </script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
       body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        /* Approximate font from PDF */
-      }
-      /* Ensure list bullets are styled as per PDF */
-      ul {
-        list-style-position: outside; /* Default, but good to be explicit if issues arise */
-      }
-      /* Minor adjustments for list spacing if needed */
-      section ul li, section ol li {
-        margin-bottom: 0.25rem; /* PDF has tight list items */
-      }
-      section h4 + ul, section h4 + ol {
-        margin-top: 0.25rem; /* Tighter space after subheading */
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.1.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react/": "https://esm.sh/react@^19.1.0/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-<body class="bg-white text-gray-800">
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@rc",
+          "react/jsx-runtime": "https://esm.sh/react@rc/jsx-runtime",
+          "react-dom/client": "https://esm.sh/react-dom@rc/client",
+          "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+          "react/": "https://esm.sh/react@^19.1.0/"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body class="bg-gray-100">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- React app will be injected here -->
     <script type="module" src="/index.tsx"></script>
-</body>
+  </body>
 </html>
